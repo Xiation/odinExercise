@@ -24,44 +24,52 @@ const locations = [
         name : "Town Square",
         buttonText : ["Go to store", "Go to cave", "Fight Dragon"] ,
         buttonFunctions : [goStore, goCave, fightDragon],
-        text: "You are in the town square. You see a sign that says \"Store\"." 
+        text: "You are in the town square." 
+    },
+    {
+        name: "store",
+        buttonText: ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+        buttonFunctions: [buyHealth, buyWeapon, goTown],
+        text: "You enter the store. What item that does seem to your liking?"
+    },
+
+    {
+        name: "cave",
+        buttonText : ["Fight Slime", "Fight Fanged Beast", "Go to Town"],
+        buttonFunctions: [fightSlime, fightBeast, goTown],
+        text: "You enter the cave, a few monster start surfacing."
     }
+
 ] ;
 
-
+button1.onclick = goStore ;
+button2.onclick = goCave ;
+button3.onclick = fightDragon ;
 
 function update (location) {
+    button1.innerText = location.buttonText[0];
+    button2.innerText = location.buttonText[1] ;
+    button3.innerText = location.buttonText[2] ;
 
+    button1.onclick = location.buttonFunctions[0];
+    button2.onclick = location.buttonFunctions[1];
+    button3.onclick = location.buttonFunctions[2];
+
+    text.innerText = location.text ;
 }
 
 function goTown () {
-    button1.innerText = "Go to store";
-    button2.innerText = "Go to cave" ;
-    button3.innerText = "Fight dragon" ;
-
-    button1.onclick = goStore ;
-    button2.onclick = goCave ;
-    button3.onclick = fightDragon ;
-
-    text.innerText = "You're in the town square" ;
+    update(locations[0]);
 }
 
 // while in town
 function goStore () {
-    button1.innerText = "Buy 10 health (10 gold)" ;
-    button2.innerText = "Buy weapon (30 gold)" ; 
-    button3.innerText = "Go to town square" ;
-    
-    button1.onclick = buyHealth ;
-    button2.onclick = buyWeapon ;
-    button3.onclick = goTown ;
-
-    text.innerText = "You are in store" ;
+    update(locations[1]) ;
 
 }
 
 function goCave () {
-
+    update(locations[2]) ;
 }
 
 function fightDragon () {
@@ -70,10 +78,23 @@ function fightDragon () {
 
 // while in store
 function buyHealth () {
-
+    gold -= 10 ;
+    health += 10 ;
+    goldText.innerText = gold ;
+    healthText.innerText = health ;
 }
 
 function buyWeapon () {
+
+}
+
+// while in cave
+
+function fightSlime () {
+
+}
+
+function fightBeast () {
 
 }
 
