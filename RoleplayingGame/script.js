@@ -9,3 +9,73 @@ let inventory = ["stick"]
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
+
+const text =  document.querySelector("#text") ;
+const xpText = document.querySelector("#xpText") ;
+const healthText = document.querySelector("#healthText") ;
+const goldText = document.querySelector("#goldText") ;
+
+const monsterStats = document.querySelector("#monsterStats");
+const monsterName = document.querySelector("#monsterName") ;
+const monsterHealthText = document.querySelector ("#monsterHealth")
+
+const locations = [
+    {
+        name : "Town Square",
+        buttonText : ["Go to store", "Go to cave", "Fight Dragon"] ,
+        buttonFunctions : [goStore, goCave, fightDragon],
+        text: "You are in the town square. You see a sign that says \"Store\"." 
+    }
+] ;
+
+
+
+function update (location) {
+
+}
+
+function goTown () {
+    button1.innerText = "Go to store";
+    button2.innerText = "Go to cave" ;
+    button3.innerText = "Fight dragon" ;
+
+    button1.onclick = goStore ;
+    button2.onclick = goCave ;
+    button3.onclick = fightDragon ;
+
+    text.innerText = "You're in the town square" ;
+}
+
+// while in town
+function goStore () {
+    button1.innerText = "Buy 10 health (10 gold)" ;
+    button2.innerText = "Buy weapon (30 gold)" ; 
+    button3.innerText = "Go to town square" ;
+    
+    button1.onclick = buyHealth ;
+    button2.onclick = buyWeapon ;
+    button3.onclick = goTown ;
+
+    text.innerText = "You are in store" ;
+
+}
+
+function goCave () {
+
+}
+
+function fightDragon () {
+
+}
+
+// while in store
+function buyHealth () {
+
+}
+
+function buyWeapon () {
+
+}
+
+
+
