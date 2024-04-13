@@ -1,0 +1,1 @@
+this roleplayinggame is insipred and derived from one of project tutorial from freecodecamp. Program inside will remain the same as the one what freecodecamp teaches.
