@@ -4,25 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href =  "./styles.css" >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title> Testing landing page </title>
 </head>
 <body>
 
     <header>
-        <nav>
-            <h1>.FREBIZ</h1>
-            <ul class = "nav-links">
-                <li><a href="#" class = "nav-bar">Home</a></li>
-                <li><a href="#" class = "nav-bar">About</a></li>
-                <li><a href="#" class = "nav-bar">Services</a></li>
-                <li><a href="#" class = "nav-bar">Contact</a></li>
-            </ul>
+        <nav class = "nav-bar">
+            <h1 class="brand-identity">.FREBIZ</h1>   
+            <li class = "nav-links">
+                <ul><a href="#" class = "nav-liactive">Home</a></ul>
+                <ul><a href="./pages/test.html" class = "nav-li">About</a></ul>
+                <ul><a href="#" class = "nav-li">Services</a></ul>
+                <ul><a href="#" class = "nav-li">Contact</a></ul>
+            </li>
         </nav>
     </header>
 
-    <div class = "content-top">
-        <p> testing </p>
+    <div class = "hero-content">
+        <div class = "Desc">
+            <h2 class = "header-desc"> videography and editing service </h2>
+            <p class="hero-para"> offering you an affordable, convenient videography and editing service to fulfill any kind of necessities </p>
+            <button class = "btn"> Order Now!</button>
+        </div>
+        <div class = "box"> Images </div>
     </div>
     
+    <div class="main">
+        <div>
+          <h2 class="main-h">Some random information.</h2>
+            <div class="main-box">
+              <div class="main-box1"></div>
+              <div class="main-box2"></div>
+              <div class="main-box3"></div>
+              <div class="main-box4"></div>
+            </div>
+            <div class="main-para">
+              <p>this is some subtext under an illustration or image</p>
+              <p>this is some subtext under an illustration or image</p>
+              <p>this is some subtext under an illustration or image</p>
+              <p>this is some subtext under an illustration or image</p>
+            </div>
+        </div>
+      </div>
+
 </body>
 </html>
